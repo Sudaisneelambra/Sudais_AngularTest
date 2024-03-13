@@ -14,7 +14,13 @@ export class ErroralertComponent implements OnInit{
   message!:string
   ngOnInit(): void {
     this.userservice.message.subscribe((msg)=>{
-      this.message=msg
+      if(Number(msg)==0){
+        this.message='NetWork Error'
+      } else if (Number(msg)==404) {
+        this.message='Not found Error'
+      } else {
+        this.message='unknown Error'
+      }
     })
   }
 

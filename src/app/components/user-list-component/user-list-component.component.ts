@@ -34,7 +34,7 @@ export class UserListComponentComponent implements OnInit, OnDestroy {
         error: (err) => {
           this.userservice.error.next(true);
           this.userservice.boolean.next(false);
-          this.userservice.message.next(err.statusText)
+          this.userservice.message.next(err.status)
         },
       });
     } catch (error) {
