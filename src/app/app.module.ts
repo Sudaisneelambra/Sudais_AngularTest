@@ -3,16 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UserListComponentComponent } from './user-list-component/user-list-component.component';
+import { UserListComponentComponent } from './components/user-list-component/user-list-component.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
-import { LoadingComponent } from './user-list-component/loading/loading.component';
+import { LoadingComponent } from './components/loading/loading.component';
+import { HomeComponent } from './components/homecomponent/homecomponent.component';
+import { ErroralertComponent } from './components/erroralert/erroralert.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserListComponentComponent,
-    LoadingComponent
+    LoadingComponent,
+    HomeComponent,
+    ErroralertComponent
   ],
   imports: [
     BrowserModule,

@@ -1,10 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { UserListComponentComponent } from './user-list-component/user-list-component.component';
+import { UserListComponentComponent } from './components/user-list-component/user-list-component.component';
+import { HomeComponent } from './components/homecomponent/homecomponent.component';
 
 const routes: Routes = [
   {
-    path:'/usercomponent',
+    path:'',
+    component:HomeComponent
+  },
+  {
+    path:'usercomponent',
     component:UserListComponentComponent
   }
 ];

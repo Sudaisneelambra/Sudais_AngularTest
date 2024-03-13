@@ -1,0 +1,53 @@
+<div class="flex flex-col items-center" *ngIf="!booleanvalue">
+  <h1 class="w-full pl-5 mt-5 text-center">Search You Want</h1>
+  <form action="" class="flex flex-col w-[70%] p-2">
+    <div class="">
+      <label for="name">name</label>
+      <input
+        type="text"
+        name="name"
+        id=""
+        class="w-full border-2 border-[groove] rounded-[4px] pl-2"
+        placeholder="Serach name"
+        [(ngModel)]="name"
+        (keyup)="namesearch()"
+      />
+    </div>
+    <div class="">
+      <label for="email">email</label>
+      <input
+        type="text"
+        name="email"
+        id=""
+        class="w-full border-2 border-[groove] rounded-[4px] pl-2"
+        placeholder="Serach email"
+        [(ngModel)]="email"
+        (keyup)="mailsearch()"
+      />
+    </div>
+  </form>
+  <table>
+    <thead>
+      <tr>
+        <th>User ID</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Website</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of userdata">
+        <td>{{ data?.id }}</td>
+        <td>{{ data?.name }}</td>
+        <td>{{ data?.email }}</td>
+        <td>{{ data?.website }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <h1
+    class="text-center font-bold text-[red] w-full"
+    *ngIf="userdata.length < 1"
+  >
+    No User Data Found
+  </h1>
+</div>
